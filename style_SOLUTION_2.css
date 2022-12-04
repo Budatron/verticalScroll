@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: SangBleuSunrise;
+  src: url(/fonts/SangBleuSunrise-Regular-WebXL.ttf);
+}
+
+
+body {
+  background: #ABC4CC;
+  min-height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.mask1 {
+ 
+
+  width: 100vw;
+  height: 100vh;
+  /* padding: 1rem; */
+
+  /* background-image: url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-size: cover;
+  background-position: center; */
+
+  mask-size: contain;
+
+  -webkit-mask-image: url(tiat.png);
+  mask-image: url(tiat.png);
+  /* -webkit-mask-size: 70%; */
+  /* mask-size: 70%; */
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;   
+  -webkit-mask-position-x: 100px ;
+  -webkit-mask-position-y: 500px ;
+  transition: -webkit-mask-position-x 0.4s;
+}
+
+.text-container{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.text-fx {
+  position: absolute;
+  top: 500px;
+  left: 100px;
+  font-size: 57.3px;
+  color: #609BAE;
+  font-family: SangBleuSunrise;
+  transition: left 0.4s;
+  width: 600px;
+}
+
+.gallery {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    color: #C95D63;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.cards {
+    position: absolute;
+}
+
+.cards li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    width: 400px;
+    height: 600px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 4rem;
+    font-family: sans-serif;
+    background-color: #AE8799;
+    position: absolute;
+    top: -730px;
+    left: -200px;
+    border-radius: 0.8rem;
+    transition: left 0.4s;
+}
+
+.cards-a li {
+  background-size: cover;
+  background-position: center;
+}
+
+.cards-a li:nth-child(1){
+  background-image: url(/images/DBH.jpeg);
+}
+
+.cards-a li:nth-child(2) {
+  background-image: url(/images/die-Heiland.jpeg);
+}
+
+.cards-a li:nth-child(3) {
+  background-image: url(/images/kirschblueten-hanami.jpeg);
+}
+
+.cards-a li:nth-child(4) {
+  background-image: url(/images/kirschblueten.jpeg);
+}
+
+.cards-a li:nth-child(5) {
+  background-image: url(/images/kommissarin-lucas.jpeg);
+}
+
+.cards-b li {
+ 
+  background-color: white;
+  
+}
+
+@media only screen and (min-width: 800px) {
+  
+
+  .cards li{
+    left: 0px;
+
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  
+
+  .cards li{
+    width: 500px;
+    height: 700px;
+    left: 200px;
+
+  }
+}
+
+
+@media only screen and (min-width: 1600px) {
+  .text-fx {
+    top: 400px;
+    left: 496px;
+  }
+
+  .mask1 {
+    -webkit-mask-position-x: 500px;
+    -webkit-mask-position-y: 400px;
+  }
+
+  .cards li{
+    width: 600px;
+    height: 800px;
+    left: 600px;
+
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .text-fx {
+   
+    left: 696px;
+  }
+
+  .mask1 {
+    -webkit-mask-position-x: 700px;
+  }
+
+  .cards li{
+    width: 800px;
+    height: 1000px;
+    left: 900px;
+
+  }
+}
+
+
+
+
+/* BUTTONS */
+/* .actions {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  button {
+    display:inline-block;
+    outline: none;
+    border: none;
+    padding: 8px 14px;
+    background: #414141;
+    background-image: -webkit-linear-gradient(top, #575757, #414141);
+    background-image: -moz-linear-gradient(top, #575757, #414141);
+    background-image: -ms-linear-gradient(top, #575757, #414141);
+    background-image: -o-linear-gradient(top, #575757, #414141);
+    background-image: linear-gradient(to bottom, #575757, #414141);
+    text-shadow: 0px 1px 0px #414141;
+    -webkit-box-shadow: 0px 1px 0px 414141;
+    -moz-box-shadow: 0px 1px 0px 414141;
+    box-shadow: 0px 1px 0px 414141;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 auto 10px;
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    padding: 12px 25px;
+    font-family: "Signika Negative", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 5px;
+  }
+  
+  button:hover {
+    background: #57a818;
+    background-image: -webkit-linear-gradient(top, #57a818, #4d9916);
+    background-image: -moz-linear-gradient(top, #57a818, #4d9916);
+    background-image: -ms-linear-gradient(top, #57a818, #4d9916);
+    background-image: -o-linear-gradient(top, #57a818, #4d9916);
+    background-image: linear-gradient(to bottom, #57a818, #4d9916);
+    text-shadow: 0px 1px 0px #32610e;
+    -webkit-box-shadow: 0px 1px 0px fefefe;
+    -moz-box-shadow: 0px 1px 0px fefefe;
+    box-shadow: 0px 1px 0px fefefe;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  button {
+    font-size: 12px;
+    font-weight: 400;
+  } */
+  
+ 
+  .drag-proxy {
+    visibility: hidden;
+    position: absolute;
+  }
